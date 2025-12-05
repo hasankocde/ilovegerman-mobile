@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">ILoveGerman</string>
+    <string name="title_activity_main">ILoveGerman</string>
+    <string name="package_name">com.ilovegerman.app</string>
+    <string name="custom_url_scheme">com.ilovegerman.app</string>
+</resources>

@@ -1,0 +1,38 @@
+<!-- assets/icon.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: transparent;
+        }
+        img {
+            cursor: pointer;
+            border-radius: 5px;
+            /* Pencereyi sürüklemeyi engeller, sadece tıklamayı sağlar */
+            -webkit-app-region: no-drag;
+        }
+    </style>
+</head>
+<body>
+    <!-- İkon olarak projenizin ana ikonunu kullanıyoruz -->
+    <img src="./icon.png" width="28" height="28" id="clickable-icon">
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const icon = document.getElementById('clickable-icon');
+            if (icon) {
+                icon.addEventListener('click', () => {
+                    // Tıklandığında ana sürece 'icon-clicked' mesajını gönder
+                    if (window.electron && window.electron.ipcRenderer) {
+                        window.electron.ipcRenderer.sendMessage('icon-clicked');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

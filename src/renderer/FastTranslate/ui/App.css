@@ -1,0 +1,30 @@
+/* src/ui/App.css */
+body {
+    margin: 0;
+    font-family: 'Inter', 'Roboto', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: transparent !important;
+    color: #1f2933;
+}
+
+#root {
+    min-height: 100vh;
+    background-color: transparent !important;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
