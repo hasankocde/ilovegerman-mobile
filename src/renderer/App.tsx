@@ -833,7 +833,7 @@ Tr: Sabahın erken saatlerinde, kız ve erkek öğrenciler, yataktan isteksizce 
             }, 500);
           }
         }
-      }).catch(err => {
+      }).catch((err: Error) => {
         console.log('Check intent failed or no intent', err);
         addDebugLog('Check intent error: ' + err.message);
       });
