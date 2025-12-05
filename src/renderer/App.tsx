@@ -822,7 +822,8 @@ Tr: Sabahın erken saatlerinde, kız ve erkek öğrenciler, yataktan isteksizce 
 
     // Check for initial intent (Cold Start)
     try {
-      SendIntent.checkSendIntentReceived().then((data: any) => {
+      // Using type assertion because checkSendIntentReceived exists on Android but not web
+      (SendIntent as any).checkSendIntentReceived?.()?.then((data: any) => {
         console.log('Initial shared content checked:', data);
         if (data && data.extras) {
           const sharedText = data.extras['android.intent.extra.TEXT'] || data.extras['android.intent.extra.PROCESS_TEXT'] || data.extras['android.intent.extra.SUBJECT'];
