@@ -21,7 +21,6 @@ export const ConversationArea: React.FC<ConversationAreaProps> = ({
     deleteConversationItem,
     liveAssistantText,
 }) => {
-    const surfaceBg = '#f4f6fb';
     const filteredItems = items.filter(item => item.role !== 'user');
     const liveText = liveAssistantText?.trim();
 
@@ -47,25 +46,16 @@ export const ConversationArea: React.FC<ConversationAreaProps> = ({
             }}
         >
             <Box ref={conversationContentRef} sx={{ flexGrow: 1, overflowY: 'auto' }}>
-                {/* Live Text */}
+                {/* Live Text - Using AudioResultDisplay for consistent formatting */}
                 {liveText && (
-                    <Box
-                        sx={{
-                            position: 'relative',
-                            mb: 0.5,
-                            p: 1,
-                            borderRadius: 2,
-                            bgcolor: surfaceBg,
-                            border: 1,
-                            borderColor: 'divider',
-                        }}
-                    >
-                        <Typography sx={{ fontSize: '0.75rem', lineHeight: 1.5, whiteSpace: 'pre-wrap' }}>
-                            {liveText}
-                        </Typography>
-                        <Typography variant="caption" sx={{ position: 'absolute', top: 4, right: 8, opacity: 0.6, fontSize: '0.65rem' }}>
-                            Live
-                        </Typography>
+                    <Box sx={{ mb: 0.5 }}>
+                        <AudioResultDisplay
+                            resultText={liveText}
+                            isLoading={true}
+                            errorText=""
+                            onCorrectText={() => { }}
+                            compact={true}
+                        />
                     </Box>
                 )}
 
