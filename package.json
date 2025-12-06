@@ -10,13 +10,13 @@
     "gemini",
     "language-learning"
   ],
-  "homepage": "https://github.com/hasankocoglu/ai-learn-language",
+  "homepage": "https://github.com/hasankocoglu/ai-translate-mobil",
   "bugs": {
-    "url": "https://github.com/hasankocoglu/ai-learn-language/issues"
+    "url": "https://github.com/hasankocoglu/ai-translate-mobil/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hasankocoglu/ai-learn-language.git"
+    "url": "git+https://github.com/hasankocoglu/ai-translate-mobil.git"
   },
   "license": "MIT",
   "author": {
