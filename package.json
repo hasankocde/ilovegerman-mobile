@@ -35,11 +35,11 @@
   "dependencies": {
     "@arco-design/web-react": "^2.66.8",
     "@capacitor/android": "^6.2.1",
-    "@capacitor/ios": "^6.2.1",
     "@capacitor/app": "^6.0.0",
     "@capacitor/cli": "^6.2.1",
     "@capacitor/clipboard": "^6.0.3",
     "@capacitor/core": "^6.2.1",
+    "@capacitor/ios": "^6.2.1",
     "@cfworker/json-schema": "^4.1.1",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
